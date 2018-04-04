@@ -1,0 +1,9 @@
+{
+  "name": "address-book",
+  "version": "1.0.0",
+  "description": "Vanilla ES2016 Address book implementation",
+  "main": "index.js",
+  "author": "Raoul DIFFOUO",
+  "license": "MIT",
+  "private": false
+}
