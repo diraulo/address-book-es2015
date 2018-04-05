@@ -8,7 +8,7 @@ class AddressBookWorld {
   constructor() {}
 
   async openHomePage() {
-    this.browser = await puppeteer.launch()
+    this.browser = await puppeteer.launch({ headless: false, slowMo: 10 })
     this.page = await this.browser.newPage()
     await this.page.goto(HOME_PAGE)
   }
@@ -17,10 +17,37 @@ class AddressBookWorld {
     await this.browser.close()
   }
 
-  async pageHasTextContent(content, occurrence_count) {
-    const page_content = await this.page.content()
-    const actual_occurrence = page_content.match(content).length
-    expect(actual_occurrence).to.be.eq(occurrence_count)
+  async pageHasTextContent(content, occurrenceCount) {
+    const pageContent = await this.page.content()
+    const actualOccurrence = pageContent.match(content).length
+    expect(actualOccurrence).to.be.eq(occurrenceCount)
+  }
+
+  async clickButton(btnName) {
+    const btnSelector = this.btnSelectorFromName(btnName)
+    await this.page.waitForSelector(btnSelector)
+    await this.page.click(btnSelector)
+  }
+
+  async fillFormField(field, content) {
+    const inputSelector = `#contact-${field}`
+    await this.page.waitForSelector(inputSelector)
+    this.inputElement = await this.page.$(inputSelector)
+    await this.inputElement.type(content)
+  }
+
+  btnSelectorFromName(btnName) {
+    switch (btnName.toLowerCase()) {
+      case 'add contact':
+        return '.add-contact'
+        break
+      case 'save contact':
+        return '.save-contact'
+        break
+      default:
+        throw `${btnName} button is not defined.`
+        break
+    }
   }
 }
 

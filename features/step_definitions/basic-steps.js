@@ -15,3 +15,15 @@ Given('I visit the site', async function() {
 Then('I should see {string}', function(content) {
   return this.pageHasTextContent(content, 1)
 })
+
+Then('I click {string}', async function(btnName) {
+  return await this.clickButton(btnName)
+})
+
+Then('I fill in {string} with {string}', async function(field, content) {
+  return await this.fillFormField(field.toLowerCase(), content)
+})
+
+Then('I should have {int} contact in my address book', function(int) {
+  return 'pending'
+})
