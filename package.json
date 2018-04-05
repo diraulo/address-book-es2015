@@ -12,14 +12,17 @@
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
     "cucumber": "^4.1.0",
+    "cucumber-pretty": "^1.4.1",
     "mocha": "^5.0.5",
     "puppeteer": "^1.2.0",
     "superstatic": "^5.0.1"
   },
   "scripts": {
     "start": "superstatic -p 3000",
-    "cucumber": "superstatic -p 3000 2> /dev/null & cucumber-js && lsof -ti tcp:3000 | xargs kill",
+    "cucumber":
+      "superstatic -p 3000 2> /dev/null & cucumber-js -f node_modules/cucumber-pretty && lsof -ti tcp:3000 | xargs kill",
     "test": "mocha --require babel-polyfill --require babel-register",
-    "test-watch": "mocha --require babel-polyfill --require babel-register --watch"
+    "test-watch":
+      "mocha --require babel-polyfill --require babel-register --watch"
   }
 }

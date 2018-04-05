@@ -589,7 +589,7 @@ colors@1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/colors/-/colors-1.0.3.tgz#0433f44d809680fdeb60ed260f1b0c262e82a40b"
 
-colors@^1.1.2:
+colors@^1.1.2, colors@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/colors/-/colors-1.2.1.tgz#f4a3d302976aaf042356ba1ade3b1a2c62d9d794"
 
@@ -690,11 +690,20 @@ cucumber-expressions@^5.0.13:
   dependencies:
     becke-ch--regex--s0-0-v1--base--pl--lib "^1.2.0"
 
+cucumber-pretty@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/cucumber-pretty/-/cucumber-pretty-1.4.1.tgz#ce66f12242fb35966ab78c24d0c50cb226ae2562"
+  dependencies:
+    cli-table "^0.3.1"
+    colors "^1.2.1"
+    cucumber "^4.0.0"
+    figures "^2.0.0"
+
 cucumber-tag-expressions@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/cucumber-tag-expressions/-/cucumber-tag-expressions-1.1.1.tgz#7f5c7b70009bc2b666591bfe64854578bedee85a"
 
-cucumber@^4.1.0:
+cucumber@^4.0.0, cucumber@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/cucumber/-/cucumber-4.1.0.tgz#d93af1de8a05bf6428ae9d4021e0b0d406683518"
   dependencies:
@@ -887,7 +896,7 @@ fd-slicer@~1.0.1:
   dependencies:
     pend "~1.2.0"
 
-figures@2.0.0:
+figures@2.0.0, figures@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/figures/-/figures-2.0.0.tgz#3ab1a2d2a62c8bfb431a0c94cb797a2fce27c962"
   dependencies:
