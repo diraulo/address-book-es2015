@@ -38,24 +38,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnSaveContact = document.querySelector('.save-contact')
 
   btnAddContact.addEventListener('click', () => {
-    // Show the form
     addContactForm.classList.remove('hide')
-
-    // Show cancel button
     btnCancelAddContact.classList.remove('hide')
-
-    // Hide Add button
     btnAddContact.classList.add('hide')
   })
 
   btnCancelAddContact.addEventListener('click', () => {
-    // hide the form
     addContactForm.classList.add('hide')
-
-    // hide cancel button
     btnCancelAddContact.classList.add('hide')
-
-    // Show Add button
     btnAddContact.classList.remove('hide')
   })
 
