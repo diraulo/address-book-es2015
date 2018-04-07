@@ -24,6 +24,6 @@ Then('I fill in {string} with {string}', async function(field, content) {
   return await this.fillFormField(field.toLowerCase(), content)
 })
 
-Then('I should have {int} contact in my address book', function(int) {
-  return 'pending'
+Then('I should have {int} contact in my address book', async function(count) {
+  return await this.checkNumberOfSavedContacts(count)
 })

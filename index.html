@@ -6,26 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+
+  <style>
+    .hide {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
   <h1>Contacts</h1>
   <button class="add-contact">Add contact</button>
+  <button class="hide hide-form">Cancel</button>
 
-  <form action="#">
+  <form action="#" class="hide new-contact-form">
     <label for="contact-name">Name</label>
-    <input id="contact-name" type="text">
+    <input id="contact-name" name="name" type="text">
     <label for="contact-email">Email</label>
-    <input id="contact-email" type="email">
+    <input id="contact-email" name="email" type="email">
     <label for="contact-phone">Phone</label>
-    <input id="contact-phone" type="text">
+    <input id="contact-phone" name="phone" type="text">
     <label for="contact-company">Company</label>
-    <input id="contact-company" type="text">
+    <input id="contact-company" name="company" type="text">
     <label for="contact-notes">Notes</label>
-    <textarea id="contact-notes" type="text"></textarea>
+    <textarea id="contact-notes" name="notes" type="text"></textarea>
     <label for="contact-twitter">Twitter</label>
-    <input id="contact-twitter" type="text">
-    <input class="save-contact" type="button" value="Save contact">
+    <input id="contact-twitter" name="twitter" type="text">
+    <input class="save-contact" type="submit" value="Save contact">
   </form>
 
   <script src="./dist/bundle.js"></script>
