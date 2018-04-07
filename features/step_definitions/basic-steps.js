@@ -13,7 +13,7 @@ Given('I visit the site', async function() {
 })
 
 Then('I should see {string}', function(content) {
-  return this.pageHasTextContent(content, 1)
+  return this.pageHasTextContent(content)
 })
 
 Then('I click {string}', async function(btnName) {

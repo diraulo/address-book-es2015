@@ -17,10 +17,10 @@ class AddressBookWorld {
     await this.browser.close()
   }
 
-  async pageHasTextContent(content, occurrenceCount) {
+  async pageHasTextContent(expectedContent) {
     const pageContent = await this.page.content()
-    const actualOccurrence = pageContent.match(content).length
-    expect(actualOccurrence).to.be.eq(occurrenceCount)
+    const actualContent = pageContent.match(expectedContent)[0]
+    expect(actualContent).to.be.eq(expectedContent)
   }
 
   async clickButton(btnName) {
