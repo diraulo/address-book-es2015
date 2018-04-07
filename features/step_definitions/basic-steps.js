@@ -27,3 +27,7 @@ Then('I fill in {string} with {string}', async function(field, content) {
 Then('I should have {int} contact in my address book', async function(count) {
   return await this.checkNumberOfSavedContacts(count)
 })
+
+Then('I should not see {string}', function(content) {
+  return this.pageDoesNotHaveTextContent(content)
+})

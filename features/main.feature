@@ -6,6 +6,7 @@ I would like to keep an address book with their contacts
   Background: Visit the home page
     Given I visit the site
     Then I should see "Contacts"
+    And I should see "You have no contacts in your address book"
 
   Scenario: Create a new contact
     When I click "Add contact"
@@ -17,3 +18,5 @@ I would like to keep an address book with their contacts
     And I fill in "Twitter" with "johndoe"
     And I click "Save contact"
     Then I should have 1 contact in my address book
+    And I should see "John Doe"
+    And I should not see "You have no contacts in your address book"
